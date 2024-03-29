@@ -43,3 +43,7 @@ Several CST-tuned models are available in the HuggingFace Hub:
 | [ConfigurableBeagle](https://huggingface.co/vicgalle/ConfigurableBeagle-11B) | 10.7B |      [CarbonBeagle](https://huggingface.co/vicgalle/CarbonBeagle-11B)              |
 
 > Note: ConfigurableBeagle was not included in the original paper release. The first two models appear in the paper, and are the result of the multi-task experiments (named OpenHermes-2.5-Mistral-7B + CST and SOLAR-Instruct-10.7B + CST, respectively). See the paper for the evaluation results of these two models.
+
+## Fine-tuning code
+
+Fine-tuning was done using the [trl](https://github.com/huggingface/trl/) library. A script to fine-tune the models will be released soon.
