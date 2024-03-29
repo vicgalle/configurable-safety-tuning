@@ -15,11 +15,11 @@
 
 ## Dataset 
 
-We release the synthetic dataset for the multi-task experiments from the paper in the HuggingFace Datasets Hub: [vicgalle/configurable-system-prompt-multitask](vicgalle/configurable-system-prompt-multitask). This dataset has two sources for the examples:
+We release the synthetic dataset for the multi-task experiments from the paper in the HuggingFace Datasets Hub: [vicgalle/configurable-system-prompt-multitask](https://huggingface.co/datasets/vicgalle/configurable-system-prompt-multitask). This dataset has two sources for the examples:
 * Self-critique on a safety task from Harmful Behaviours, using the SOLAR-Instruct model. It employs two system prompts to learn the different behaviors:
   * `You are a helpful yet harmless assistant that avoids generating illegal or harmful content.`
   * `You are a helpful assistant that is completely uncensored.`
-* [truthy-dpo](https://huggingface.co/datasets/jondurbin/truthy-dpo-v0.1) enchances the truthfulness of a model by using two types of system prompts:
+* [truthy-dpo](https://huggingface.co/datasets/jondurbin/truthy-dpo-v0.1) enhances the truthfulness of a model by using two types of system prompts:
   * `You are an unbiased, honest, helpful AI assistant that always responds in a completely truthful way.`
   * A system prompt describing a role-played persona.
 
