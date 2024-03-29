@@ -20,7 +20,7 @@ We released the synthetic dataset for the multi-task experiments from the paper.
 
 ## Configurable Models 
 
-The CST-tuned models are available in the HuggingFace Hub:
+Several CST-tuned models are available in the HuggingFace Hub:
 
 | Model              | Size  | Fine-tuned from |
 | ------------------ | ----- | --------------- |
