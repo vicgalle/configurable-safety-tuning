@@ -1,1 +1,1 @@
-# configurable-safety-tuning
+# Configurable Safety Tuning of LLMs 🛞
