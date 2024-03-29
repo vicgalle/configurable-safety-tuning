@@ -1,5 +1,9 @@
 # Configurable Safety Tuning of LLMs 🛞
 
+> tl;dr: CST allows for configurable inference-time control of LLM safety levels, providing users with the autonomy to dictate model behavior based on the system prompt.
+
+State-of-the-art language model fine-tuning techniques, such as Direct Preference Optimization (DPO), restrict user control by hard-coding predefined behaviors into the model. To address this, we propose a novel method, Configurable Safety Tuning (CST), that augments DPO using synthetic preference data to facilitate flexible safety configuration of LLMs at inference-time. CST overcomes the constraints of vanilla DPO by introducing a system prompt specifying safety configurations, enabling LLM deployers to disable/enable safety preferences based on their need, just changing the system prompt. Our experimental evaluations indicate that CST successfully manages different safety configurations and retains the original functionality of LLMs, showing it is a robust method for configurable deployment.
+
 
 ## High-level overview
 
