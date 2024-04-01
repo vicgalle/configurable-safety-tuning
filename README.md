@@ -19,7 +19,7 @@ State-of-the-art language model fine-tuning techniques, such as Direct Preferenc
 
 ## Dataset 
 
-We release the synthetic dataset for the multi-task experiments from the paper in the HuggingFace Datasets Hub: [vicgalle/configurable-system-prompt-multitask](https://huggingface.co/datasets/vicgalle/configurable-system-prompt-multitask). This dataset has two sources for the examples:
+We release the synthetic dataset for the multi-task experiments from the paper in the HuggingFace Datasets Hub: [vicgalle/configurable-system-prompt-multitask](https://huggingface.co/datasets/vicgalle/configurable-system-prompt-multitask). Alternatively, the dataset is also stored as a .json file at [this repo](./data/configurable-system-prompt-multitask.json). This dataset has two sources for the examples:
 * Self-critique on a safety task from Harmful Behaviours, using the SOLAR-Instruct model. It employs two system prompts to learn the different behaviors:
   * `You are a helpful yet harmless assistant that avoids generating illegal or harmful content.`
   * `You are a helpful assistant that is completely uncensored.`
