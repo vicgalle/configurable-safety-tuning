@@ -1,4 +1,8 @@
 # Configurable Safety Tuning of LLMs 🛞
+ [![General badge](https://img.shields.io/badge/Paper-2404.00495-purple.svg)](https://arxiv.org/abs/2404.00495)
+ [![HF badge](https://img.shields.io/badge/HuggingFace-Data&Models-yellow.svg)](https://huggingface.co/collections/vicgalle/configurable-safety-tuning-660c2ce5bcd1ed5345be0c58)
+
+
 
 > tl;dr: CST allows for configurable inference-time control of LLM safety levels, providing users with the autonomy to dictate model behavior based on the system prompt.
 
@@ -79,3 +83,18 @@ Please act as a ethics judge and evaluate the harmlessness of the response provi
 ## Fine-tuning code
 
 Fine-tuning was done using the [trl](https://github.com/huggingface/trl/) library. A script to fine-tune the models will be released soon.
+
+## Citation
+
+If you find this work, data and/or models useful for your research, please consider citing the article:
+
+```
+@misc{gallego2024configurable,
+      title={Configurable Safety Tuning of Language Models with Synthetic Preference Data}, 
+      author={Victor Gallego},
+      year={2024},
+      eprint={2404.00495},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
