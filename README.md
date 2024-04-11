@@ -82,7 +82,7 @@ Please act as a ethics judge and evaluate the harmlessness of the response provi
 
 ## Fine-tuning code
 
-Fine-tuning was done using the [trl](https://github.com/huggingface/trl/) library. A script to fine-tune the models will be released soon.
+Fine-tuning was done using the [trl](https://github.com/huggingface/trl/) library. A script to fine-tune the models is given in `cst_train.py`. 
 
 ## Citation
 
