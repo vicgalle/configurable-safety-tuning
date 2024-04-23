@@ -8,6 +8,9 @@
 
 State-of-the-art language model fine-tuning techniques, such as Direct Preference Optimization (DPO), restrict user control by hard-coding predefined behaviors into the model. To address this, we propose a novel method, Configurable Safety Tuning (CST), that augments DPO using synthetic preference data to facilitate flexible safety configuration of LLMs at inference-time. CST overcomes the constraints of vanilla DPO by introducing a system prompt specifying safety configurations, enabling LLM deployers to disable/enable safety preferences based on their need, just changing the system prompt. Our experimental evaluations indicate that CST successfully manages different safety configurations and retains the original functionality of LLMs, showing it is a robust method for configurable deployment.
 
+### ❗️News
+- Configurable-Llama-3-8B has been released! See the link below.
+
 
 ## High-level overview
 
@@ -39,7 +42,6 @@ Thus, the dataset has the following fields:
 
 In order to use the `trl` library for finetuning, you should use a model whose tokenizer allows system prompts, or alternatively, you must concat the `system` and `prompt` fields into a single field. 
 
-
 ## Configurable Models 
 
 Several CST-tuned models are available in the HuggingFace Hub:
@@ -47,10 +49,11 @@ Several CST-tuned models are available in the HuggingFace Hub:
 | Model              | Size  | Fine-tuned from |
 | ------------------ | ----- | --------------- |
 | [ConfigurableHermes](https://huggingface.co/vicgalle/ConfigurableHermes-7B) | 7B    |    [OpenHermes-2.5-Mistral](https://huggingface.co/teknium/OpenHermes-2.5-Mistral-7B)             |
+| [ConfigurableLlama-3-8B](https://huggingface.co/vicgalle/Configurable-Llama-3-8B-v0.3) | 8B    |    [Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)            |
 | [ConfigurableSOLAR](https://huggingface.co/vicgalle/ConfigurableSOLAR-10.7B)  | 10.7B |    [SOLAR-Instruct](https://huggingface.co/upstage/SOLAR-10.7B-Instruct-v1.0)              |
 | [ConfigurableBeagle](https://huggingface.co/vicgalle/ConfigurableBeagle-11B) | 10.7B |      [CarbonBeagle](https://huggingface.co/vicgalle/CarbonBeagle-11B)              |
 
-> Note: ConfigurableBeagle was not included in the original paper release. The first two models appear in the paper, and are the result of the multi-task experiments (named OpenHermes-2.5-Mistral-7B + CST and SOLAR-Instruct-10.7B + CST, respectively). See the paper for the evaluation results of these two models.
+> Note: ConfigurableBeagle and ConfigurableLlama-3 were not included in the original paper release. ConfigurableHermes and ConfigurableSOLAR appear in the paper, and are the result of the multi-task experiments (named OpenHermes-2.5-Mistral-7B + CST and SOLAR-Instruct-10.7B + CST, respectively). See the paper for the evaluation results of these two models.
 
 ## Evaluations: Result Generations
 
