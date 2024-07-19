@@ -1,0 +1,4 @@
+datasets==2.20.0
+transformers==4.42.4
+peft==0.11.1
+trl==0.9.6

@@ -1,9 +1,8 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
-from transformers import TrainingArguments
 
 from datasets import load_dataset
 
-from trl import DPOTrainer
+from trl import DPOTrainer, DPOConfig
 from peft import LoraConfig
 from peft import prepare_model_for_kbit_training
 import torch
@@ -15,13 +14,8 @@ model_name = "teknium/OpenHermes-2.5-Mistral-7B"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 tokenizer.padding_side = "right"
 
-# add special tokens
-if model_name == "teknium/OpenHermes-2.5-Mistral-7B":
-    tokenizer.add_special_tokens(
-        {
-            "pad_token": "</s>",
-        }
-    )
+tokenizer.pad_token = tokenizer.eos_token
+
 
 
 def template_prompt(system, prompt):
@@ -30,18 +24,13 @@ def template_prompt(system, prompt):
             {"role": "user", "content": prompt},
         ]
     else:
-        if model_name == "abacusai/bigstral-12b-32k":
-            messages = [
-                {"role": "user", "content": system + "\n" + prompt},
-            ]
-        else:
-            messages = [
-                {
-                    "role": "system",
-                    "content": system,
-                },
-                {"role": "user", "content": prompt},
-            ]
+        messages = [
+            {
+                "role": "system",
+                "content": system,
+            },
+            {"role": "user", "content": prompt},
+        ]
     prompt = tokenizer.apply_chat_template(
         messages, tokenize=False, add_generation_prompt=False
     )
@@ -112,7 +101,7 @@ model = prepare_model_for_kbit_training(model)
 
 output_name = f"checkpoints/exp_configurable_{model_name}"
 
-training_args = TrainingArguments(
+training_args = DPOConfig(
     per_device_train_batch_size=2,
     gradient_accumulation_steps=4,
     num_train_epochs=1,
