@@ -9,6 +9,8 @@
 State-of-the-art language model fine-tuning techniques, such as Direct Preference Optimization (DPO), restrict user control by hard-coding predefined behaviors into the model. To address this, we propose a novel method, Configurable Safety Tuning (CST), that augments DPO using synthetic preference data to facilitate flexible safety configuration of LLMs at inference-time. CST overcomes the constraints of vanilla DPO by introducing a system prompt specifying safety configurations, enabling LLM deployers to disable/enable safety preferences based on their need, just changing the system prompt. Our experimental evaluations indicate that CST successfully manages different safety configurations and retains the original functionality of LLMs, showing it is a robust method for configurable deployment.
 
 ### ❗️News
+- Configurable-Hermes-2-Pro-Llama-3-8B, 
+- Paper accepted at [Practical DL Worskhop @ IEEE CAI 2024](https://practical-dl.github.io/#paper)
 - Configurable-Llama-3-8B has been released! See the link below.
 
 
@@ -50,6 +52,8 @@ Several CST-tuned models are available in the HuggingFace Hub:
 | ------------------ | ----- | --------------- |
 | [ConfigurableHermes](https://huggingface.co/vicgalle/ConfigurableHermes-7B) | 7B    |    [OpenHermes-2.5-Mistral](https://huggingface.co/teknium/OpenHermes-2.5-Mistral-7B)             |
 | [ConfigurableLlama-3-8B](https://huggingface.co/vicgalle/Configurable-Llama-3-8B-v0.3) | 8B    |    [Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)            |
+| [Configurable-Hermes-2-Pro-Llama-3-8B](https://huggingface.co/vicgalle/Configurable-Hermes-2-Pro-Llama-3-8B) | 8B    |    [Hermes-2-Pro-Llama-3-8B](https://huggingface.co/NousResearch/Hermes-2-Pro-Llama-3-8B)            |
+| [Configurable-Yi-1.5-9B-Chat](https://huggingface.co/vicgalle/Configurable-Yi-1.5-9B-Chat) | 9B    |    [Yi-1.5-9B-Chat](https://huggingface.co/01-ai/Yi-1.5-9B-Chat)            |
 | [ConfigurableSOLAR](https://huggingface.co/vicgalle/ConfigurableSOLAR-10.7B)  | 10.7B |    [SOLAR-Instruct](https://huggingface.co/upstage/SOLAR-10.7B-Instruct-v1.0)              |
 | [ConfigurableBeagle](https://huggingface.co/vicgalle/ConfigurableBeagle-11B) | 10.7B |      [CarbonBeagle](https://huggingface.co/vicgalle/CarbonBeagle-11B)              |
 
