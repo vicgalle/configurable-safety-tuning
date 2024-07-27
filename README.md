@@ -9,7 +9,7 @@
 State-of-the-art language model fine-tuning techniques, such as Direct Preference Optimization (DPO), restrict user control by hard-coding predefined behaviors into the model. To address this, we propose a novel method, Configurable Safety Tuning (CST), that augments DPO using synthetic preference data to facilitate flexible safety configuration of LLMs at inference-time. CST overcomes the constraints of vanilla DPO by introducing a system prompt specifying safety configurations, enabling LLM deployers to disable/enable safety preferences based on their need, just changing the system prompt. Our experimental evaluations indicate that CST successfully manages different safety configurations and retains the original functionality of LLMs, showing it is a robust method for configurable deployment.
 
 ### ❗️News
-- Configurable-Hermes-2-Pro-Llama-3-8B, 
+- Configurable-Hermes-2-Pro-Llama-3-8B and Configurable-Yi-1.5-9B-Chat released!
 - Paper accepted at [Practical DL Worskhop @ IEEE CAI 2024](https://practical-dl.github.io/#paper)
 - Configurable-Llama-3-8B has been released! See the link below.
 
